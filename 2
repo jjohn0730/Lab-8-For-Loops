@@ -1,0 +1,35 @@
+/*
+ Johanna Johnh
+ Computer Science I - Mika Morgan
+ Lab #8 - For-Loops
+ 03.10.2022
+*/
+
+#include<iostream> 
+#include<fstream> 
+#include<iomanip> 
+using namespace std;
+int main()
+{
+	int r, c;
+	int sum = 0;
+	// When processing a table with a nested loop, the row loop goes on the 
+	// outside, and the column loop goes on the inside 
+	 
+	
+	for (r = 1; r <= 10; r++) // for-loop with declaration that it runs by less or equal to 10 and add 1 afterwards
+	{
+		for (c = 1; c <= 10; c++) // for-loop to run always when its less or equal to 10 && add 1
+		{
+			cout << setw(3) << r;
+			sum += c;
+			cout << "Summmmm " << sum << '\n';
+		}
+		
+		cout << '\n'; // Separates each row of the table 
+		
+	}
+	cout << "Sum = " << sum*(--r) << '\n'; // --r because it adds 1 more inside the loop and then checks for the statement egain. So it is 11 and we have to go back to ten
+	system("pause");
+	return 0;
+}
