@@ -1,0 +1,23 @@
+/*
+*/
+
+#include<iostream> 
+#include<fstream> 
+#include<iomanip> 
+using namespace std;
+int main()
+{
+	int r, c;
+	// When processing a table with a nested loop, the row loop goes on the 
+	// outside, and the column loop goes on the inside 
+	for (r = 1; r <= 5; r++)
+	{
+		for (c = 1; c <= 4; c++)
+		{
+			cout << setw(3) << r;
+		}
+		cout << '\n'; // Separates each row of the table 
+	}
+	system("pause");
+	return 0;
+}
